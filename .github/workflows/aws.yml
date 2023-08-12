@@ -32,10 +32,10 @@ on:
 
 env:
   AWS_REGION: us-east-2                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: public.ecr.aws/i4x1t7s3/dyanalyzer  # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: 757653479413.dkr.ecr.us-east-2.amazonaws.com/dyanalyzer  # set this to your Amazon ECR repository name
   ECS_SERVICE: dyanalyzer-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: dyanalyzer-cluster                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: dyanalyzer-deploy # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: dyanalyzer-deploy-task # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: dyanalyzer           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
