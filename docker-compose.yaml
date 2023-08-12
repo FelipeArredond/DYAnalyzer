@@ -1,6 +1,7 @@
 version: '1'
 services:
   dbanalyzer:
+    container_name: dyanalyzerContainer
     image: dyanalyzer:latest
     ports:
       - "8000:8000"
