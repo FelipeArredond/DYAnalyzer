@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: my-dyanalyzer-repo
   ECS_SERVICE: dyanalyzer-service
   ECS_CLUSTER: dyanalyzer-cluster
-  ECS_TASK_DEFINITION: dyanalyzer-deploy-task
+  ECS_TASK_DEFINITION: ../../task-definition.json
   CONTAINER_NAME: dyanalyzer
 
 permissions:
