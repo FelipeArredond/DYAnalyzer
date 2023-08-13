@@ -4,14 +4,18 @@ from .application.scanner_service import scanner
 
 def scanner_view(request):
     response = scanner()
-    print(response[0])
-    print(response[1])
-    print(response[2])
-    print(response[3])
-
+    items_to_render = []
+    i = 0
+    # while i < 8:
+    #     print(response[i])
+    #     i+=1
+    while i < len(response):
+        if(i>8):
+            items_to_render.append(response[i])
+        i+=1
 
     tittle = 'Test Results'
     return render(request, 'results.html', {
         'tittle': tittle,
-        'items': response
+        'items': items_to_render
     })
