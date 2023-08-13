@@ -1,122 +1,69 @@
 {
-    "ipcMode": null,
-    "executionRoleArn": "arn:aws:iam::757653479413:role/ecsTaskExecutionRole",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/DYANALYZERTASK:1",
     "containerDefinitions": [
-      {
-        "dnsSearchDomains": null,
-        "environmentFiles": null,
-        "logConfiguration": {
-          "logDriver": "awslogs",
-          "secretOptions": null,
-          "options": {
-            "awslogs-group": "/ecs/DYANALYZERTASK",
-            "awslogs-region": "us-east-2",
-            "awslogs-stream-prefix": "ecs"
-          }
+        {
+            "name": "dyanalyzer",
+            "image": "757653479413.dkr.ecr.us-east-2.amazonaws.com/my-dyanalyzer-repo",
+            "cpu": 0,
+            "portMappings": [],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/DYANALYZERTASK",
+                    "awslogs-region": "us-east-2",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "DYANALYZERTASK",
+    "executionRoleArn": "arn:aws:iam::757653479413:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
         },
-        "entryPoint": [],
-        "portMappings": [],
-        "command": [],
-        "linuxParameters": null,
-        "cpu": 0,
-        "environment": [],
-        "resourceRequirements": null,
-        "ulimits": null,
-        "dnsServers": null,
-        "mountPoints": [],
-        "workingDirectory": null,
-        "secrets": null,
-        "dockerSecurityOptions": null,
-        "memory": null,
-        "memoryReservation": null,
-        "volumesFrom": [],
-        "stopTimeout": null,
-        "image": "757653479413.dkr.ecr.us-east-2.amazonaws.com/my-dyanalyzer-repo",
-        "startTimeout": null,
-        "firelensConfiguration": null,
-        "dependsOn": null,
-        "disableNetworking": null,
-        "interactive": null,
-        "healthCheck": null,
-        "essential": true,
-        "links": null,
-        "hostname": null,
-        "extraHosts": null,
-        "pseudoTerminal": null,
-        "user": null,
-        "readonlyRootFilesystem": null,
-        "dockerLabels": null,
-        "systemControls": null,
-        "privileged": null,
-        "name": "dyanalyzer"
-      }
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
     ],
     "placementConstraints": [],
-    "memory": "512",
-    "taskRoleArn": null,
     "compatibilities": [
-      "EC2",
-      "FARGATE"
+        "EC2",
+        "FARGATE"
     ],
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/DYANALYZERTASK:1",
-    "family": "DYANALYZERTASK",
-    "requiresAttributes": [
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.execution-role-awslogs"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.ecr-auth"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.execution-role-ecr-pull"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.task-eni"
-      }
-    ],
-    "pidMode": null,
-    "requiresCompatibilities": [
-      "FARGATE"
-    ],
-    "networkMode": "awsvpc",
     "runtimePlatform": {
-      "operatingSystemFamily": "LINUX",
-      "cpuArchitecture": null
+        "operatingSystemFamily": "LINUX"
     },
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
     "cpu": "256",
-    "revision": 1,
-    "status": "ACTIVE",
-    "inferenceAccelerators": null,
-    "proxyConfiguration": null,
-    "volumes": []
-  }
+    "memory": "512",
+    "registeredAt": 1691889168.475,
+    "registeredBy": "arn:aws:iam::757653479413:root"
+}
