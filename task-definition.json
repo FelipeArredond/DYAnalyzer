@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/DYANALYZERPORTMAPPED:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/dyanalyzerV3:1",
     "containerDefinitions": [
         {
             "name": "dyanalyzer",
@@ -21,14 +21,15 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/DYANALYZERPORTMAPPED",
+                    "awslogs-group": "/ecs/dyanalyzerV3",
                     "awslogs-region": "us-east-2",
                     "awslogs-stream-prefix": "ecs"
                 }
             }
         }
     ],
-    "family": "DYANALYZERPORTMAPPED",
+    "family": "dyanalyzerV3",
+    "taskRoleArn": "arn:aws:iam::757653479413:role/ECS_Task_Role",
     "executionRoleArn": "arn:aws:iam::757653479413:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -46,6 +47,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -70,6 +74,6 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": 1691893280.369,
+    "registeredAt": 1691897378.767,
     "registeredBy": "arn:aws:iam::757653479413:root"
 }
