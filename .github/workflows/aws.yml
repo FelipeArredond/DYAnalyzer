@@ -77,6 +77,11 @@ jobs:
         echo "RUTA*******************************"
         ls
         pwd
+    
+        
+    - name: Aqua Security Trivy
+      uses: aquasecurity/trivy-action@0.11.2
+      
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
@@ -93,3 +98,4 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+
