@@ -1,11 +1,17 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/DYANALYZERTASK:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/DYANALYZERPORTMAPPED:1",
     "containerDefinitions": [
         {
             "name": "dyanalyzer",
             "image": "757653479413.dkr.ecr.us-east-2.amazonaws.com/my-dyanalyzer-repo",
             "cpu": 0,
-            "portMappings": [],
+            "portMappings": [
+                {
+                    "containerPort": 8000,
+                    "hostPort": 8000,
+                    "protocol": "tcp"
+                }
+            ],
             "essential": true,
             "entryPoint": [],
             "command": [],
@@ -15,14 +21,14 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/DYANALYZERTASK",
+                    "awslogs-group": "/ecs/DYANALYZERPORTMAPPED",
                     "awslogs-region": "us-east-2",
                     "awslogs-stream-prefix": "ecs"
                 }
             }
         }
     ],
-    "family": "DYANALYZERTASK",
+    "family": "DYANALYZERPORTMAPPED",
     "executionRoleArn": "arn:aws:iam::757653479413:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -64,6 +70,6 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": 1691889168.475,
+    "registeredAt": 1691893280.369,
     "registeredBy": "arn:aws:iam::757653479413:root"
 }
