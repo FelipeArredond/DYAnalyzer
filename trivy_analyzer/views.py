@@ -4,4 +4,14 @@ from .application.scanner_service import scanner
 
 def scanner_view(request):
     response = scanner()
-    return HttpResponse(response)
+    print(response[0])
+    print(response[1])
+    print(response[2])
+    print(response[3])
+
+
+    tittle = 'Test Results'
+    return render(request, 'results.html', {
+        'tittle': tittle,
+        'items': response
+    })
