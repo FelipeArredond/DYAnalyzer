@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AnalyzerConfig(AppConfig):
+class TrivyAnalyzerConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'analyzer'
+    name = 'trivy_analyzer'
