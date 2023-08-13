@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import subprocess
-import docker
+from .application.analyze import downloadTrivyImage
 
-client = docker.from_env()
-
-
-# Create your views here.
 def hello(request):
-    return HttpResponse("Added Trivy to gh actions")
+    result = downloadTrivyImage()
+    return HttpResponse(result)
+
+def about(request):
+    # downloadTrivyImage()
+    return HttpResponse("About")
