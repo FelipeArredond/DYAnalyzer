@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/dyanalyzerV3:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:757653479413:task-definition/dyanalyzerV3:10",
     "containerDefinitions": [
         {
             "name": "dyanalyzer",
-            "image": "757653479413.dkr.ecr.us-east-2.amazonaws.com/my-dyanalyzer-repo",
+            "image": "757653479413.dkr.ecr.us-east-2.amazonaws.com/my-dyanalyzer-repo:757553dd9fc110fab952b71695f4e6d7b33d453c",
             "cpu": 0,
             "portMappings": [
                 {
@@ -13,8 +13,6 @@
                 }
             ],
             "essential": true,
-            "entryPoint": [],
-            "command": [],
             "environment": [],
             "mountPoints": [],
             "volumesFrom": [],
@@ -32,7 +30,7 @@
     "taskRoleArn": "arn:aws:iam::757653479413:role/ECS_Task_Role",
     "executionRoleArn": "arn:aws:iam::757653479413:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 10,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -74,6 +72,6 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": 1691897378.767,
-    "registeredBy": "arn:aws:iam::757653479413:root"
+    "registeredAt": 1691944949.656,
+    "registeredBy": "arn:aws:iam::757653479413:user/cliuser"
 }

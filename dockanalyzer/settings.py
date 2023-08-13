@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'trivy_analyzer'
+    'trivy_analyzer',
+    'basic_views'
 ]
 
 MIDDLEWARE = [
