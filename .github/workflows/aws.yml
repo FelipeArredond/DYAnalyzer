@@ -32,7 +32,7 @@ on:
 
 env:
   AWS_REGION: us-east-2
-  ECR_REPOSITORY: public.ecr.aws/i4x1t7s3/dyanalyzer-repo
+  ECR_REPOSITORY: my-dyanalyzer-repo
   ECS_SERVICE: dyanalyzer-service
   ECS_CLUSTER: dyanalyzer-cluster
   ECS_TASK_DEFINITION: dyanalyzer-deploy-task
@@ -72,7 +72,7 @@ jobs:
         # push it to ECR so that it can
         # be deployed to ECS.
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
     - name: Fill in the new image ID in the Amazon ECS task definition
