@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block file_message %}
+<p>File Uploaded succesfully</p>
+<button id="scan_button">Scan File</button>
+<script>
+    let button = document.getElementById('scan_button')
+    button.addEventListener('click', () => {
+        window.location.pathname = 'scanner'
+    })
+</script>
+{% endblock %}
