@@ -29,9 +29,9 @@ def search_uploaded_file():
 def scanner():
     file_to_scan = search_uploaded_file()
     process = subprocess.run('checkov -f ' + file_to_scan, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    output = process.stdout
-    clear_temp_folder() 
+    output = process.stdout 
     if process.returncode == 0:
         print("Command executed successfully")
-        print(output)   
-    return output.split('\n')
+        print(output)
+    clear_temp_folder()
+    return output.split('\n') 

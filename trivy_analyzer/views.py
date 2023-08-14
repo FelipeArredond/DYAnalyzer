@@ -8,9 +8,7 @@ def scanner_view(request):
     response = scanner()
     items_to_render = []
     i = 0
-    # while i < 8:
-    #     print(response[i])
-    #     i+=1
+    print(response)
     while i < len(response):
         if(i>8):
             items_to_render.append(str(response[i]).upper())
