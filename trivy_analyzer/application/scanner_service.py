@@ -18,11 +18,20 @@ def clear_temp_folder():
             print('Error deleting path ')
 
 
+def search_uploaded_file():
+    temp_uploads_path = Path('temp_uploads')
+    files_in_folder = temp_uploads_path.iterdir()
+    file_result = []
+    for file in files_in_folder:
+        file_result.append(file.as_posix())
+    return file_result[0]
+
 def scanner():
-    process = subprocess.run('checkov -f dockerfile', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    file_to_scan = search_uploaded_file()
+    process = subprocess.run('checkov -f ' + file_to_scan, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     output = process.stdout
-    clear_temp_folder()
+    clear_temp_folder() 
     if process.returncode == 0:
         print("Command executed successfully")
-        print(output)
+        print(output)   
     return output.split('\n')
