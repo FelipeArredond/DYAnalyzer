@@ -13,7 +13,7 @@ def scanner_view(request):
     #     i+=1
     while i < len(response):
         if(i>8):
-            items_to_render.append(response[i])
+            items_to_render.append(str(response[i]).upper())
         i+=1
 
     tittle = 'Test Results'

@@ -10,8 +10,15 @@
 </head>
 <body>
     <h1 class="tittle">dyAnalyzer</h1>
+    <div class="file_form">
+        {% block file_form %}
+        {% endblock %}
+        {% block file_message %}
+        {% endblock %}
+    </div>
     <div class="content">
-        .
+        {% block content %}
+        {% endblock %}
     </div>
 </body>
 </html>

@@ -16,8 +16,12 @@ body{
 .content{
     margin: auto;
     margin-top: 50px;
-    width: 80%;
+    padding: 10px;
+    width: 90%;
     height: 300px;
     border-left: solid 2px white;
     border-right: solid 2px white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
