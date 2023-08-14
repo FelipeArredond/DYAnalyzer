@@ -26,7 +26,6 @@ def upload_file(request):
     if request.method == 'POST':
         form = FileUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            # Save the uploaded file to a temporary folder
             uploaded_file = form.cleaned_data['file']
             temp_folder = 'temp_uploads/'
             os.makedirs(temp_folder, exist_ok=True)
