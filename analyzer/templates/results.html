@@ -3,8 +3,20 @@
 <h1>{{tittle}}</h1>
 {% block content %}
 {% for item in items %}
-
-<p>{{ item }}</p>
-
+    <p>
+    {% for word in item %}
+        {% if word == 'PASSED' %}
+            <span style="color: green;">{{ word }}</span>
+        {% elif word == 'FAILED' %}
+            <span style="color: red;">{{ word }}</span>
+        {% elif word == 'FAILED' %}
+            <span style="color: red;">{{ word }}</span>
+        {% elif word == 'SKIPPED' %}
+            <span style="color: yellow;">{{ word }}</span>
+        {% else %}
+            <span>{{word}}</span>
+        {% endif %}
+    {% endfor %}
+    </p>
 {% endfor %}
 {% endblock %}

@@ -19,8 +19,8 @@ body{
     margin-top: 50px;
     padding: 10px;
     width: 90%;
-    border-left: solid 4px white;
-    border-right: solid 4px white;
+    border: solid 4px white;
+    background-color: black;
     display: flex;
     flex-direction: column;
     gap: 5px;
