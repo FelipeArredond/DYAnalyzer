@@ -22,5 +22,7 @@ from basic_views.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('scanner/', scanner_view)
+    path('scanner/', scanner_view),
+    path('upload/', upload_file, name='upload_file'),
+
 ]
