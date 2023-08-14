@@ -10,7 +10,7 @@ def scanner_view(request):
     i = 0
     print(response)
     while i < len(response):
-        if(i>8):
+        if(i>10):
             items_to_render.append(str(response[i]).upper())
         i+=1
 
