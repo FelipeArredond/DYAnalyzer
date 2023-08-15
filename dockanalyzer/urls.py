@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from trivy_analyzer.views import *
+from analyzer.views import *
 from basic_views.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('scanner/', scanner_view),
-    path('upload/', upload_file, name='upload_file'),
+    path('', index, name='index'),
+    path('scanner/', scanner_view, name='scanner'),
+    path('upload/', upload_file, name='upload'),
 
 ]

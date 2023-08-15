@@ -1,2 +1,3 @@
 django
 checkov
+pre-commit

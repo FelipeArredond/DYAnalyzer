@@ -1,19 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse, request
-from .application.scanner_service import scanner
+from analyzer.application.folders_managment_service import Folder_Manager
+from .application.scanner_service import Scanner_Service
 from .application.form import FileUploadForm
 import os
 
 def scanner_view(request):
-    response = scanner()
+    folder_manager = Folder_Manager()
+    scanner = Scanner_Service(folder_manager)
+    response = scanner.scan()
     items_to_render = []
     i = 0
-    # while i < 8:
-    #     print(response[i])
-    #     i+=1
     while i < len(response):
-        if(i>8):
-            items_to_render.append(str(response[i]).upper())
+        if(i>10):
+            items_to_render.append(str(response[i]).upper().split(' '))
         i+=1
 
     tittle = 'Test Results'
