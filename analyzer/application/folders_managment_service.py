@@ -17,7 +17,7 @@ class Folder_Manager:
                 else:
                     print('File ' + file + ' skipped')
             except Exception as e:
-                print('Error deleting path ')
+                pass
 
     @staticmethod
     def search_uploaded_file() -> []:
