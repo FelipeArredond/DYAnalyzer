@@ -14,6 +14,5 @@ class Scanner_Service:
         output = process.stdout 
         if process.returncode == 0:
             print("Command executed successfully")
-            print(output)
         self.__folder_manager.clear_temp_folder()
         return output.split('\n') 

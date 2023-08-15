@@ -10,7 +10,6 @@ class Folder_Manager:
         temp_uploads_path = Path('temp_uploads')
         files_in_folder = temp_uploads_path.iterdir()
         for file in files_in_folder:
-            print(file)
             try:
                 if file.is_file():
                     file.unlink()

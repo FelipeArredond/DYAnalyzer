@@ -12,7 +12,6 @@ def scanner_view(request):
     response = scanner.scan()
     items_to_render = []
     i = 0
-    print(response)
     while i < len(response):
         if(i>10):
             items_to_render.append(str(response[i]).upper().split(' '))
