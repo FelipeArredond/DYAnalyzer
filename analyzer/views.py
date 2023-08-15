@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse, request
-
 from analyzer.application.folders_managment_service import Folder_Manager
 from .application.scanner_service import Scanner_Service
 from .application.form import FileUploadForm
