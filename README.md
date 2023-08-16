@@ -92,47 +92,19 @@ Se realizaron la siguiente prueba:
 
 ### Trivy
 
-| Targets | Dependencias | Scanners |
-| --- | --- | --- |
-| - Container Image
-- Filesystem
-- Git Repository 
-- Virtual Machine Image
-- Kubernetes
-- AWS | docker ( en el host ) | - OS packages and software dependencies in use
-- Known vulnerabilities (CVEs)
-- IaC issues and misconfigurations
-- Sensitive information and secrets
-- Software licenses |
+![trivyb.png](DYAnalyzerDOC/trivyb.png)
 
 ### Grype
 
-| Targets | Dependencias | Scanners |
-| --- | --- | --- |
-| - Container Image
-- Filesystem
-- Kubernetes | docker ( en el host ) | - OS packages and software dependencies in use    - Sensitive information and secrets                               - Known vulnerabilities                            |
+![grypeb.png](DYAnalyzerDOC/grypeb.png)
 
 ### Checkov
 
-| Targets | Dependencias | Scanners |
-| --- | --- | --- |
-| - Container Image
-- Filesystem
-- Kubernetes                      - Terraform                      - AWS | python3  ( en el host ) | - OS packages and software dependencies in use
-- Known vulnerabilities (CVEs)
-- IaC issues and misconfigurations
-- Sensitive information and secrets
-- Software licenses |
+![checovb.png](DYAnalyzerDOC/checovb.png)
 
 ### CoGuard
 
-| Targets | Dependencias | Scanners |
-| --- | --- | --- |
-| - Container Image
-- Repository                      - Cloud config ( AWS, Azure, GCP ) | python3  ( en el host ) | - OS packages and software dependencies in use
-- IaC issues and misconfigurations
-- Sensitive information and secrets |
+![coguardb.png](DYAnalyzerDOC/coguardb.png)
 
 ## Conclusion
 
